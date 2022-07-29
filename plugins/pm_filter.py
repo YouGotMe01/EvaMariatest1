@@ -83,18 +83,6 @@ async def next_page(bot, query):
             for file in files
         ]
 
-        btn.insert(0, 
-        [
-            InlineKeyboardButton(f'♨️ {search} ♨️ ', 'dupe')
-        ]
-    )
-    btn.insert(1,
-        [ 
-            InlineKeyboardButton(f'🗂️Total File', '{(len_results)}'),
-            InlineKeyboardButton(f'ᴛɪᴘs', 'tips')
-        ]
-    )
-
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -624,12 +612,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    elif query.data == "close":
-        await query.message.delete()
-    elif query.data == 'tips':
-        await query.answer("sᴇɴᴅ ᴄᴏʀʀᴇᴄᴛ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ɴᴀᴍᴇ ғᴏʀ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛs .\nᴛᴏ ɢᴇᴛ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛ ғᴏʀ sᴇʀɪᴇs sᴇᴀʀᴄʜ ʟɪᴋᴇ ᴇxᴀᴍᴘʟᴇ ɢɪᴠᴇɴ, Eg - Peaky Blinders S01E01\n\n © 𝖥𝖨𝖫𝖤𝖲𝖤𝖠𝖱𝖢𝖧𝗑𝖡𝖮𝖳", True)
-    try: await query.answer('Your Results are there in Filter Button') 
-    except: pass
+    await query.answer('Piracy Is Crime')
+
 
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
@@ -676,18 +660,6 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-
-        btn.insert(0, 
-        [
-            InlineKeyboardButton(f'♨️ {search} ♨️ ', 'dupe')
-        ]
-    )
-    btn.insert(1,
-        [ 
-            InlineKeyboardButton(f'🗂️Total File', '{(len_results)}'),
-            InlineKeyboardButton(f'ᴛɪᴘs', 'tips')
-        ]
-    )
 
     if offset != "":
         key = f"{message.chat.id}-{message.message_id}"
