@@ -83,6 +83,17 @@ async def next_page(bot, query):
             for file in files
         ]
 
+    btn.insert(0,
+        [
+            InlineKeyboardButton(f'♨️ {search} ♨️ ', 'dupe')
+        ]
+    )
+    btn.insert(1,
+        [
+            InlineKeyboardButton(f'📁 ᴛᴏᴛᴀʟ ғɪʟᴇs = {total_results}',show_alert=True)
+        ]
+    )   
+
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -661,6 +672,17 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
 
+        btn.insert(0,
+        [
+            InlineKeyboardButton(f'♨️ {search} ♨️ ', 'dupe')
+        ]
+    )
+    btn.insert(1,
+        [
+            InlineKeyboardButton(f'📁 ᴛᴏᴛᴀʟ ғɪʟᴇs = {total_results}',show_alert=True)
+        ]
+    )  
+    
     if offset != "":
         key = f"{message.chat.id}-{message.message_id}"
         BUTTONS[key] = search
