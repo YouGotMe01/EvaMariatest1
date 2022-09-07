@@ -91,20 +91,20 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⬅ ᴘʀᴇᴠɪᴏᴜꜱ ꜰɪʟᴇꜱ", callback_data=f"next_{req}_{key}_{off_set}"),
+            [InlineKeyboardButton("◀️ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📃 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"📃 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("ᴍᴏʀᴇ ꜰɪʟᴇꜱ ➡", callback_data=f"next_{req}_{key}_{n_offset}")])
+             InlineKeyboardButton("NEXT ▶️", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⬅ ᴘʀᴇᴠɪᴏᴜꜱ ꜰɪʟᴇꜱ", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("◀️ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"📃 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("ᴍᴏʀᴇ ꜰɪʟᴇꜱ ➡", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("NEXT ▶️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ...!!!! \nᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴇɴᴛᴇʀᴇᴅ ꜱᴘᴇʟʟɪɴɢ 😝 ᴏʀ ᴇʟꜱᴇ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏɴ ᴏᴛᴛ ᴘʟᴀᴛꜰᴏʀᴍ.\nᴀꜱᴋ ʜᴇʀᴇ @raixpiro_bot ')
+            k = await query.message.edit('')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -667,7 +667,7 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"📃 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="ᴍᴏʀᴇ ꜰɪʟᴇꜱ ➡", callback_data=f"next_{req}_{key}_{offset}")]
+             InlineKeyboardButton(text="NEXT ▶️", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
@@ -708,7 +708,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🌚 ʜᴇʏ {message.from_user.mention} \n🔖 ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ \n🔎 Qᴜᴇʀʏ - {search} \n©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @rai_info17 ⚡"
+        cap = f"📁 Here is what i found for your query {search}\n⚡ @rai_info17"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -735,7 +735,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("𝕴 𝖈𝖔𝖚𝖑𝖉𝖓'𝖙 𝖋𝖎𝖓𝖉 𝖆𝖓𝖞 𝖒𝖔𝖛𝖎𝖊/𝖘𝖊𝖗𝖎𝖊𝖘 𝖎𝖓 𝖙𝖍𝖆𝖙 𝖓𝖆𝖒𝖊.....!!!!!😥🤐")
+        k = await msg.reply("I couldn't find any movie in that name.")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -764,7 +764,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("𝐈 𝐜𝐨𝐮𝐥𝐝𝐧'𝐭 𝐟𝐢𝐧𝐝 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠 𝐫𝐞𝐥𝐚𝐭𝐞𝐝 𝐭𝐨 𝐭𝐡𝐚𝐭. 𝐂𝐡𝐞𝐜𝐤 𝐲𝐨𝐮𝐫 𝐬𝐩𝐞𝐥𝐥𝐢𝐧𝐠.....!!!!!😥🤐")
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -776,7 +776,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ😒\nᴅɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏꜰ ᴛʜᴇꜱᴇ?😎\nᴄʜᴏᴏꜱᴇ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ 🙌",
+    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 

@@ -8,8 +8,9 @@ Thats All, i will Provide Movies There...🤓🤪
 
 ⚠️More Help Check Help Button Below
 
+😎 Powered by @rai_info17
 
-©️MᴀɪɴᴛᴀɪɴᴇD Bʏ @rithesh_rkrm_17"""
+©️ Maintained By @rithesh_rkrm_17"""
     HELP_TXT = """
     🙋🏻‍♂️   Hellooo  {} 🤓
 
@@ -26,14 +27,16 @@ This methord works on any chat, Just type @maixrai_bot and then leave a space an
  /status - Bot Status
  /info - User info 
  /id - User id
+ /stats - Db status  
  /broadcast - Broadcast (owner only)
- /stats - Db status  (owner only )
 
 ○ Notice 📙:-
 
 ○Dont Spam Me...🤒
 
-©️MᴀɪɴᴛᴀɪɴᴇD Bʏ @rithesh_rkrm_17"""
+😎 Powered by @rai_info17
+
+©️ Maintained By @rithesh_rkrm_17"""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
 ✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/rithesh_rkrm_17>『ᴘɪʀᴏ』</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
