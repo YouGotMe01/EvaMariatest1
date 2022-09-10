@@ -708,7 +708,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>📁 I Found {total_results} Files For Your Query =</b> {search} \n\n<i>⚡ Uploaded By</i> @rai_info17"
+        cap = f"<b>📁 I Found</b> {total_results} <b>Files For Your Query =</b> {search} \n\n<i>⚡ Uploaded By</i> @rai_info17"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
