@@ -14,12 +14,12 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '15430744'))
 API_HASH = environ.get('API_HASH', '9029b7d66c1cb94805dfb77774e5abba')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5470181920:AAFRt6jCpkLR1KbJSxh3K8WOY9N4h3U752s')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5066810767:AAF7T-PLQCV_3pPVWFz8lTdY00iIexmjB1wLuci1')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/9581364082fb21b5ffe42.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/9d83cb15b613f33ba20a5.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '761686219 1875429051 1369291772').split()]
@@ -33,7 +33,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rai:rai@cluster0.zcrha.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Files")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Luci1")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
