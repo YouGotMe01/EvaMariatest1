@@ -90,7 +90,7 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'🔮 𝖳𝖨𝖯𝖲', 'tips')
+            InlineKeyboardButton(f'😇 𝖲𝖮𝖬𝖤 𝖳𝖨𝖯𝖲', 'tips')
         ]
     )
 
@@ -415,13 +415,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝚍𝚍 𝙼𝚎 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙𝚜 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/rai_info17')
+            InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/rai_info17')
         ], [
-            InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', callback_data='help'),
-            InlineKeyboardButton('😊 𝙰𝚋𝚘𝚞𝚝', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
+            InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -432,11 +432,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+            InlineKeyboardButton('⚔️ Manual Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('🖥 Auto Filter', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('📡 Connection', callback_data='coct'),
+            InlineKeyboardButton('💡 Extra Mods', callback_data='extra')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔮 Status', callback_data='stats')
