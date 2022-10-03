@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🔖{get_size(file.file_size)}🎪{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"🔖{get_size(file.file_size)}🔮{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -90,7 +90,7 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'🗂 𝖥𝖨𝖫𝖤𝖲:{total_results}', 'tips'),
+            InlineKeyboardButton(f'🗂 𝖥𝖨𝖫𝖤𝖲: {total_results}', 'tips'),
             InlineKeyboardButton(f'🔮 𝖳𝖨𝖯𝖲', 'tips')
         ]
     )
@@ -624,6 +624,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
+    elif query.data == "close":
+        await query.message.delete()
     elif query.data == 'tips':
         await query.answer("🔎𝖠𝖲𝖪 𝖶𝖨𝖳𝖧 𝖢𝖮𝖱𝖱𝖤𝖢𝖳 𝖲𝖯𝖤𝖫𝖫𝖨𝖭𝖦\n😤𝖣𝖮𝖭𝖳 𝖠𝖲𝖪 𝖬𝖮𝖵𝖨𝖤𝖲/𝖲𝖤𝖱𝖨𝖤𝖲 𝖳𝖧𝖮𝖲𝖤 𝖠𝖱𝖤 𝖭𝖮𝖳 𝖱𝖤𝖫𝖤𝖠𝖲𝖤𝖣 𝖮𝖭 𝖮𝖳𝖳\n🤓𝖥𝖮𝖱 𝖡𝖤𝖳𝖳𝖤𝖱 𝖱𝖤𝖲𝖴𝖫𝖳𝖲:\n𝖬𝖮𝖵𝖨𝖤 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖫𝖠𝖭𝖦𝖴𝖠𝖦𝖤\n𝖲𝖤𝖱𝖨𝖤𝖲 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖰𝖴𝖠𝖫𝖨𝖳𝖸", True)
     try: await query.answer('𝖸𝗈𝗎𝗋 𝖱𝖾𝗌𝗎𝗅𝗍𝗌 𝖺𝗋𝖾 𝗍𝗁𝖾𝗋𝖾 𝗂𝗇 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗎𝗍𝗍𝗈𝗇') 
@@ -656,23 +658,37 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🔖{get_size(file.file_size)}🎪{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"text=f"🔖{get_size(file.file_size)}🔮{file.file_name}", callback_data=f'files#{file.file_id}'
+                ),
+            ]
+            for file in files
+        ]
+    else:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{file.file_name}",
+                    callback_data=f'{pre}#{file.file_id}',
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
             for file in files
         ]
 
-        btn.insert(0, 
+    btn.insert(0, 
         [
             InlineKeyboardButton(f'♨️ {search} ♨️ ', 'tips')
         ]
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'🗂 𝖥𝖨𝖫𝖤𝖲:{total_results}', 'tips'),
+            InlineKeyboardButton(f'🗂 𝖥𝖨𝖫𝖤𝖲: {total_results}', 'tips'),
             InlineKeyboardButton(f'🔮 𝖳𝖨𝖯𝖲', 'tips')
         ]
-    )
+    )    
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
@@ -721,7 +737,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b> 𝖧𝖺𝗂 👋 {message.from_user.mention} </b>😍\n<b>📫 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾 𝗂𝗌 𝖱𝖾𝖺𝖽𝗒</b> \n\n⚡ 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 𝖡𝗒 @rai_info17"
+        cap = f"<b>📁 Found</b> {total_results} <b>Files For</b> {search} \n\n<i>⚡ Uploaded By</i> @rai_info17"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
