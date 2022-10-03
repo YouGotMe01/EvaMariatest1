@@ -626,7 +626,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "close":
         await query.message.delete()
     elif query.data == 'tips':
-        await query.answer("🔎𝖠𝖲𝖪 𝖶𝖨𝖳𝖧 𝖢𝖮𝖱𝖱𝖤𝖢𝖳 𝖲𝖯𝖤𝖫𝖫𝖨𝖭𝖦\n😤𝖣𝖮𝖭𝖳 𝖠𝖲𝖪 𝖬𝖮𝖵𝖨𝖤𝖲/𝖲𝖤𝖱𝖨𝖤𝖲 𝖳𝖧𝖮𝖲𝖤 𝖠𝖱𝖤 𝖭𝖮𝖳 𝖱𝖤𝖫𝖤𝖠𝖲𝖤𝖣 𝖮𝖭 𝖮𝖳𝖳\n🤓𝖥𝖮𝖱 𝖡𝖤𝖳𝖳𝖤𝖱 𝖱𝖤𝖲𝖴𝖫𝖳𝖲:\n𝖬𝖮𝖵𝖨𝖤 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖫𝖠𝖭𝖦𝖴𝖠𝖦𝖤\n𝖲𝖤𝖱𝖨𝖤𝖲 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖰𝖴𝖠𝖫𝖨𝖳𝖸", True)
+        await query.answer("🔎𝖠𝖲𝖪 𝖶𝖨𝖳𝖧 𝖢𝖮𝖱𝖱𝖤𝖢𝖳 𝖲𝖯𝖤𝖫𝖫𝖨𝖭𝖦\n😤𝖣𝖮𝖭𝖳 𝖠𝖲𝖪 𝖬𝖮𝖵𝖨𝖤𝖲/𝖲𝖤𝖱𝖨𝖤𝖲 𝖳𝖧𝖮𝖲𝖤 𝖠𝖱𝖤 𝖭𝖮𝖳 𝖱𝖤𝖫𝖤𝖠𝖲𝖤𝖣 𝖮𝖭 𝖮𝖳𝖳\n🤓𝖥𝖮𝖱 𝖡𝖤𝖳𝖳𝖤𝖱 𝖱𝖤𝖲𝖴𝖫𝖳𝖲:\n𝖬𝖮𝖵𝖨𝖤 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖫𝖠𝖭𝖦𝖴𝖠𝖦𝖤\n𝖤𝗑𝖺𝗆𝗉𝗅𝖾:\n𝖪𝗎𝗋𝗎𝗉 2021\n𝖲𝗈𝗅𝗈 𝖬𝖺𝗅𝖺𝗒𝖺𝗅𝖺𝗆\n𝖲𝖤𝖱𝖨𝖤𝖲 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖰𝖴𝖠𝖫𝖨𝖳𝖸", True)
     try: await query.answer('𝖸𝗈𝗎𝗋 𝖱𝖾𝗌𝗎𝗅𝗍𝗌 𝖺𝗋𝖾 𝗍𝗁𝖾𝗋𝖾 𝗂𝗇 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗎𝗍𝗍𝗈𝗇') 
     except: pass
 
