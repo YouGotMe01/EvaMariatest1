@@ -684,7 +684,7 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'🔮 𝖳𝖨𝖯𝖲', 'tips')
+            InlineKeyboardButton(f'😇 𝖲𝖮𝖬𝖤 𝖳𝖨𝖯𝖲', 'tips')
         ]
     )    
 
