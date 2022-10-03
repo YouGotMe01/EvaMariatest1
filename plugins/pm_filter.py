@@ -90,7 +90,6 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'🗂 𝖥𝖨𝖫𝖤𝖲: {total_results}', 'tips'),
             InlineKeyboardButton(f'🔮 𝖳𝖨𝖯𝖲', 'tips')
         ]
     )
@@ -685,7 +684,6 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'🗂 𝖥𝖨𝖫𝖤𝖲: {total_results}', 'tips'),
             InlineKeyboardButton(f'🔮 𝖳𝖨𝖯𝖲', 'tips')
         ]
     )    
