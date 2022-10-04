@@ -129,7 +129,7 @@ This module only works for my admins
 𝖳𝗈𝗍𝖺𝗅 𝖬𝖾𝗆𝖻𝖾𝗋𝗌: <code>{}</code>
 𝖳𝗈𝗍𝖺𝗅 𝖢𝗁𝖺𝗍𝗌: <code>{}</code>
 𝖴𝗌𝖾𝖽 𝖲𝗍𝗈𝗋𝖺𝗀𝖾: <code>{}</code>
-𝖢𝗎𝗋𝗋𝖾𝗇𝗍 𝖯𝗂𝗇𝗀: '𝗆𝗌' """
+ """
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>
 Total Members = <code>{}</code>
