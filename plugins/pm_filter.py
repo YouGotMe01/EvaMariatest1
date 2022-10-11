@@ -644,7 +644,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "close":
         await query.message.delete()
     elif query.data == 'tips':
-        await query.answer("🔎𝖠𝖲𝖪 𝖶𝖨𝖳𝖧 𝖢𝖮𝖱𝖱𝖤𝖢𝖳 𝖲𝖯𝖤𝖫𝖫𝖨𝖭𝖦\n😤𝖣𝖮𝖭𝖳 𝖠𝖲𝖪 𝖬𝖮𝖵𝖨𝖤𝖲/𝖲𝖤𝖱𝖨𝖤𝖲 𝖳𝖧𝖮𝖲𝖤 𝖠𝖱𝖤 𝖭𝖮𝖳 𝖱𝖤𝖫𝖤𝖠𝖲𝖤𝖣 𝖮𝖭 𝖮𝖳𝖳\n🤓𝖥𝖮𝖱 𝖡𝖤𝖳𝖳𝖤𝖱 𝖱𝖤𝖲𝖴𝖫𝖳𝖲:\n𝖬𝖮𝖵𝖨𝖤 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖫𝖠𝖭𝖦𝖴𝖠𝖦𝖤\n𝖲𝖤𝖱𝖨𝖤𝖲 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖰𝖴𝖠𝖫𝖨𝖳𝖸", True)
+        await query.answer("🔎𝖠𝖲𝖪 𝖶𝖨𝖳𝖧 𝖢𝖮𝖱𝖱𝖤𝖢𝖳 𝖲𝖯𝖤𝖫𝖫𝖨𝖭𝖦\n😤𝖣𝖮𝖭𝖳 𝖠𝖲𝖪 𝖬𝖮𝖵𝖨𝖤𝖲/𝖲𝖤𝖱𝖨𝖤𝖲 𝖳𝖧𝖮𝖲𝖤 𝖠𝖱𝖤 𝖭𝖮𝖳 𝖱𝖤𝖫𝖤𝖠𝖲𝖤𝖣 𝖮𝖭 𝖮𝖳𝖳\n🤓𝖥𝖮𝖱 𝖡𝖤𝖳𝖳𝖤𝖱 𝖱𝖤𝖲𝖴𝖫𝖳𝖲:\n𝖬𝖮𝖵𝖨𝖤 𝖭𝖠𝖬𝖤 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖫𝖠𝖭𝖦𝖴𝖠𝖦𝖤\n𝖲𝖤𝖱𝖨𝖤𝖲 𝖭𝖠𝖬𝖤 & 𝖸𝖤𝖠𝖱 𝖮𝖱 𝖰𝖴𝖠𝖫𝖨𝖳𝖸", True)
     try: await query.answer('𝖸𝗈𝗎𝗋 𝖱𝖾𝗌𝗎𝗅𝗍𝗌 𝖺𝗋𝖾 𝗍𝗁𝖾𝗋𝖾 𝗂𝗇 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗎𝗍𝗍𝗈𝗇') 
     except: pass
 
@@ -753,7 +753,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🌚 𝖧𝖾𝗅𝗅𝗈 {message.from_user.mention}\n🔰 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒\n\n♨️ 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 @rai_info17"
+        cap = f"🌚 𝖧𝖾𝗅𝗅𝗈 {message.from_user.mention}\n🔰 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒\n\n♨️ 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 Isaimini Prime "
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -780,7 +780,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -809,7 +809,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("𝖨 𝖼𝗈𝗎𝗅𝖽𝗇'𝗍 𝖿𝗂𝗇𝖽 𝖺𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝗋𝖾𝗅𝖺𝗍𝖾𝖽 𝗍𝗈 𝗍𝗁𝖺𝗍. 𝗖𝗵𝗲𝗰𝗸 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴")
+        k = await msg.reply("Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !")
         await asyncio.sleep(8)
         await k.delete()
         return
