@@ -415,13 +415,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/rai_info17')
-        ], [
-            InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
-            InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
+
+            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+
+            ],[
+
+            InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilfile'),
+
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_updates')
+
+            ],[
+
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+2YaY1CQKOfg3MzQ9'),
+
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+ah8EK67oTGJmYzVl')
+
+            ],[      
+
+            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
+
+            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+
+            ],[
+
+            InlineKeyboardButton('✅ SΞARCH HΞRΞ ✅',switch_inline_query_current_chat='')
+
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
