@@ -437,14 +437,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('⚔️ Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('🖥 Auto Filter', callback_data='autofilter')
+            InlineKeyboardButton('⚔️ Manual Filter ⚔️', callback_data='manuelfilter'),
+            InlineKeyboardButton('🖥 Auto Filter 🖥', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('📡 Connection', callback_data='coct'),
-            InlineKeyboardButton('💡 Extra Mods', callback_data='extra')
+            InlineKeyboardButton('📡 Connection 📡', callback_data='coct'),
+            InlineKeyboardButton('💡 Extra Mods 💡', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 𝖧𝗈𝗆𝖾', callback_data='start'),
-            InlineKeyboardButton('♻️ 𝖲𝗍𝖺𝗍𝗎𝗌', callback_data='stats')
+            InlineKeyboardButton('🏠 𝖧𝗈𝗆𝖾 🏠', callback_data='start'),
+            InlineKeyboardButton('♻️ 𝖲𝗍𝖺𝗍𝗎𝗌 ♻️', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -454,11 +454,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/rai_info17'),
-            InlineKeyboardButton('♥️ 𝖲𝗈𝗎𝗋𝖼𝖾', callback_data='source')
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_updates'),
+            InlineKeyboardButton('♥️ 𝖲𝗈𝗎𝗋𝖼𝖾 ♥️', callback_data='source')
         ], [
-            InlineKeyboardButton('🏠 𝖧𝗈𝗆𝖾', callback_data='start'),
-            InlineKeyboardButton('🔐 𝖢𝗅𝗈𝗌𝖾', callback_data='close_data')
+            InlineKeyboardButton('🏠 𝖧𝗈𝗆𝖾 🏠', callback_data='start'),
+            InlineKeyboardButton('🔐 𝖢𝗅𝗈𝗌𝖾 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
